@@ -12,3 +12,7 @@ python3 process[x].py --to-process /output/process[x] --output-dir /output/proce
 
 ```
 
+The program is tested with Python3.11. Use any version relatively less than 3.11 and greater than 3.6.
+
+
+Made with ❤️
