@@ -11,6 +11,8 @@ def main(
     to_process: Annotated[str, typer.Option(help="Path to the CSV folder.")],
     output_dir: Annotated[str, typer.Option(help="The folder where the resulting JSON files will be stored.")]
     ):
+    """Connect to Toll Guru API and fetch trip data to JSON files.
+    """
     env_vars = dotenv_values('./.env')
     url = env_vars.get('TOLLGURU_API_URL')
     headers = {'x-api-key': env_vars.get('TOLLGURU_API_KEY'), 'Content-Type': 'text/csv'}

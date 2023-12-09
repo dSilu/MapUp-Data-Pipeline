@@ -10,7 +10,8 @@ def main(
     to_process: Annotated[str, typer.Option(help="Path to the JSON responses folder.")],
     output_dir: Annotated[str, typer.Option(help="The folder where the final transformed_data.csv will be stored.")]
     ):
-    
+    """Extract data from the downloaded JSON files.
+    """
     if os.path.exists(to_process):
         output_file = os.path.join(output_dir, 'transformed_data.csv')
         
