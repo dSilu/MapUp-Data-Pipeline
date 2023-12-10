@@ -15,10 +15,8 @@ def main(
     """
     env_vars = dotenv_values('./.env')
     url = env_vars.get('TOLLGURU_API_URL')
-    print(url)
     
     headers = {'x-api-key': env_vars.get('TOLLGURU_API_KEY'), 'Content-Type': 'text/csv'}
-    print(headers)
     if os.path.exists(to_process):
         for file in os.listdir(to_process):
             json_file = file.replace('.csv', '.json')
